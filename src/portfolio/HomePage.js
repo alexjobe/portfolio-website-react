@@ -17,7 +17,7 @@ class HomePage extends React.Component {
       <section className='HomePage'>
         <Hero />
         <a id='PlayButton' href='/#' onClick={this.props.setPage.bind(this, pages.PAGE_GAME)}>
-          <i className="fas fa-play"></i>
+          <i className="fas fa-play-circle"></i>
         </a>
       </section>
     );

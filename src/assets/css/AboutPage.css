@@ -21,10 +21,7 @@
   -webkit-box-pack: center;
     -ms-flex-pack: center;
       justify-content: center;
-  -webkit-box-align: center;
-    -ms-flex-align: center;
-      align-items: center;
-  padding: 2rem;
+  padding: 2rem 0rem;
 }
 
 .AboutImage img {
@@ -36,6 +33,15 @@
     -ms-flex: 1 1 70%;
       flex: 1 1 70%;
   margin: 0 3.2rem;
+}
+
+.AboutText a {
+  margin: 0;
+  color: white;
+}
+
+.AboutText a:hover {
+  color: #44576f;
 }
 
 .Skills {

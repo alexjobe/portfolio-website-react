@@ -23,6 +23,8 @@ body {
 }
 
 section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   min-height:100vh;
   min-width: 100vw;
   display: -webkit-box;

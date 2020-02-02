@@ -23,6 +23,7 @@
   border-radius: 4px;
   background-color: #14F3FF;
   font-size: 25px;
+  cursor: pointer;
 }
 
 .tile.hidden {
@@ -125,6 +126,7 @@
   background-color: #45a29e;
   font-size: 30px;
   border: solid 1px transparent;
+  cursor: pointer;
 }
 
 .btn:active {
