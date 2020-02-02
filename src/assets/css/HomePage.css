@@ -1,0 +1,68 @@
+#Hero {
+  position: relative;
+  -webkit-box-pack: center;
+    -ms-flex-pack: center;
+      justify-content: center;
+  text-align: center;
+  min-height: 100%;
+  color: #66fcf1;
+  justify-content: center;
+}
+
+#Hero h1 {
+  font: 8rem "Comfortaa";
+  margin-top: 6.25rem;
+  opacity: 0;
+  -webkit-animation: 1s slidefade .5s forwards;
+          animation: 1s slidefade .5s forwards;
+}
+
+#Hero h3 {
+  font: 1.5rem "Lato";
+  opacity: 0;
+  color: #ffffff;
+  margin-top: 1.2rem;
+  -webkit-animation: 1s fade 1.5s forwards;
+          animation: 1s fade 1.5s forwards;
+}
+
+#PlayButton {
+  margin: 60px;
+  font-size: 6rem;
+}
+
+@-webkit-keyframes slidefade {
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+@keyframes slidefade {
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+@-webkit-keyframes fade {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 700px) {
+  #Hero h1 {
+    font-size: 4rem;
+  }
+
+  #Hero h3 {
+    font: 1rem;
+  }
+} 

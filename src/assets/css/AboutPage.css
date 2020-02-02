@@ -1,0 +1,136 @@
+.AboutContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  -webkit-box-pack: center;
+    -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.AboutImage {
+  -webkit-box-flex: 1;
+    -ms-flex: 1 1 30%;
+      flex: 1 1 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+    -ms-flex-pack: center;
+      justify-content: center;
+  -webkit-box-align: center;
+    -ms-flex-align: center;
+      align-items: center;
+  padding: 2rem;
+}
+
+.AboutImage img {
+  border-radius: 50%;
+}
+
+.AboutText {
+  -webkit-box-flex: 1;
+    -ms-flex: 1 1 70%;
+      flex: 1 1 70%;
+  margin: 0 3.2rem;
+}
+
+.Skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Comfortaa";
+  margin-top: 3.2rem;
+}
+
+.Skills ul {
+  height: 8rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+      flex-direction: column;
+  -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+      justify-content: space-between;
+  -webkit-box-align: center;
+    -ms-flex-align: center;
+      align-items: center;
+  width: 100%;
+  -webkit-box-flex: 1;
+    -ms-flex: 1 1 1;
+      flex: 1 1 1;
+}
+
+.Skills li {
+  margin: 0.3rem;
+}
+
+.Skills h3 {
+  -webkit-box-flex: 1;
+    -ms-flex: 1 1 30%;
+      flex: 1 1 30%;
+  font-size: 1.3rem;
+  text-align: right;
+  margin-right: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 1200px) {
+  .Skills {
+    -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    -webkit-box-align: center;
+      -ms-flex-align: center;
+        align-items: center;
+  }
+
+  .Skills ul {
+    height: 10rem;
+  }
+
+  .Skills h3 {
+    text-align: center;
+  }
+} 
+
+@media (max-width: 1000px) {
+  .AboutContent {
+    -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    -webkit-box-align: center;
+      -ms-flex-align: center;
+        align-items: center;
+    -webkit-box-pack: center;
+      -ms-flex-pack: center;
+        justify-content: center;
+  }
+
+  .AboutText {
+    margin: 2rem 2rem;
+  }
+
+  .AboutImage img {
+    height: 50%;
+    width: 50%;
+  }
+} 
+
+@media (max-width: 700px) {
+  .Skills h3 {
+    font-size: 1.2rem;
+  }
+  
+  .Skills li {
+    font-size: 1rem;
+  }
+} 

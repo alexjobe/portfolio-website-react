@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Lato'); 
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+  min-height:100vh;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Lato', sans-serif;
+  background-color: #0b0c10;
+}
+
+body {
+  min-height:100vh;
+  margin: 0px;
+  padding: 0px;
+  font-size: 100%;
+}
+
+section {
+  min-height:100vh;
+  min-width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+      flex-direction: column;
+  -webkit-box-align: center;
+    -ms-flex-align: center;
+      align-items: center;
+  justify-content: center;
+  color: #66fcf1;
+  opacity: 0;
+  -webkit-animation: 1s fade 0s forwards;
+          animation: 1s fade 0s forwards;
+}
+
+.SectionTitle {
+  text-transform: capitalize;
+  font: 2.5rem "Comfortaa";
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+p, li {
+  font-size: 1.3rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #66fcf1;
+  -webkit-transition: color .1s ease-in-out;
+  -o-transition: color .1s ease-in-out;
+  transition: color .1s ease-in-out;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+a:hover {
+  color: white;
+}
+
+@-webkit-keyframes fade {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  100% {
+    opacity: 1;
+  }
+}
