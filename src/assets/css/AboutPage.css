@@ -125,9 +125,13 @@
     margin: 2rem 2rem;
   }
 
+  .AboutImage {
+    padding: 0;
+  }
+
   .AboutImage img {
-    height: 50%;
-    width: 50%;
+    height: 12rem;
+    width: 12rem;
   }
 } 
 

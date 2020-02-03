@@ -50,7 +50,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Navbar setPage={this.setPage} />
-        <ProjectsPage />
+        <ProjectsPage setPage={this.setPage} />
       </div>
     );
   }
