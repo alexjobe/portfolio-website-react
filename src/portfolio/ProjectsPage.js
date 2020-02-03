@@ -74,7 +74,7 @@ class ProjectsPage extends React.Component {
             aboutText={<p>A forum built with Node.js, Express, and MongoDB that features user authentication</p>}
           />
         </div>
-        <a className="GithubLink" href="https://github.com/alexjobe">{"See more at Github "}
+        <a className="GithubLink" target="_blank" rel="noopener noreferrer" href="https://github.com/alexjobe">{"See more at Github "}
           <i className="fab fa-github"></i>
         </a>
       </section>
