@@ -54,7 +54,7 @@ class ProjectsPage extends React.Component {
             iconClass="fas fa-radiation"
             link="/#"
             title="MineSweeper.js"
-            aboutText={<p>A clone of Minesweeper made entirely in React. You can play it here!</p>}
+            aboutText={<p>A Minesweeper clone made entirely in React: click to play it here!</p>}
             onClick={this.props.setPage.bind(this, pages.PAGE_GAME)}
           />
           <Project
