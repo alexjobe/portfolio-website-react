@@ -1,12 +1,12 @@
 import React from 'react';
 import Project from './Project';
 import '../assets/css/ProjectsPage.css'
-import OlymbotsImg from '../assets/img/olymbots.png';
-import ZordoImg from '../assets/img/zordo.png';
-import NodeImg from '../assets/img/node.png';
-import LaptopCheckoutImg from '../assets/img/laptopCheckout.png';
-import SdlImg from '../assets/img/sdl.png';
-import MineSweeperImg from '../assets/img/mineSweeper.png';
+import OlymbotsImg from '../assets/img/olymbots.jpg';
+import ZordoImg from '../assets/img/zordo.jpg';
+import NodeImg from '../assets/img/node.jpg';
+import LaptopCheckoutImg from '../assets/img/laptopCheckout.jpg';
+import SdlImg from '../assets/img/sdl.jpg';
+import MineSweeperImg from '../assets/img/mineSweeper.jpg';
 
 const pages = {
   PAGE_HOME: "PAGE_HOME",
