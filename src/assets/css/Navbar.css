@@ -41,8 +41,19 @@
   display: flex;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
+
+  #Navbar {
+    display: flex;
+    overflow-x: auto;
+  }
+
+  #Navbar nav {
+    flex: 0 0 auto;
+  }
   #Navbar a {
     margin: 0 0.5rem;
+    font-size: 1rem;
+    flex: 0 0 auto;
   }
 }
