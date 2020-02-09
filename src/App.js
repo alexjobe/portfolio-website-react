@@ -18,14 +18,26 @@ const pages = {
 
 class App extends React.Component {
 
+  _isMounted = false;
+
   state = {
     currentPage: pages.PAGE_HOME
   }
 
+  componentDidMount = () => {
+    this._isMounted = true;
+  }
+
+  componentWillUnmount() {
+    this._isMounted = false;
+  }
+
   setPage = (page) => {
-    this.setState(st => {
-      return { currentPage: page };
-    });
+    if (this._isMounted) {
+      this.setState(st => {
+        return { currentPage: page };
+      });
+    }
   }
 
   renderHomePage = () => {

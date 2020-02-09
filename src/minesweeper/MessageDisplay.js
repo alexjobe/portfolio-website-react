@@ -10,14 +10,26 @@ const gameStates = {
 
 class MessageDisplay extends React.Component {
 
+	_isMounted = false;
+
 	state = {
 		showTutorial: false
 	}
 
+	componentDidMount = () => {
+		this._isMounted = true;
+	}
+
+	componentWillUnmount() {
+		this._isMounted = false;
+	}
+
 	toggleTutorial = () => {
-		this.setState(st => {
-			return { showTutorial: !this.state.showTutorial };
-		});
+		if (this._isMounted) {
+			this.setState(st => {
+				return { showTutorial: !this.state.showTutorial };
+			});
+		}
 	}
 
 	renderMessage = () => {

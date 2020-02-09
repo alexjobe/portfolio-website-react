@@ -15,6 +15,8 @@ const gameStates = {
 
 class Board extends React.Component {
 
+	_isMounted = false;
+
 	state = {
 		numRows: 9,
 		numColumns: 9,
@@ -25,7 +27,12 @@ class Board extends React.Component {
 	}
 
 	componentDidMount = () => {
+		this._isMounted = true;
 		this.resetBoard();
+	}
+
+	componentWillUnmount() {
+		this._isMounted = false;
 	}
 
 	resetBoard = () => {
@@ -43,9 +50,11 @@ class Board extends React.Component {
 			tiles.push(row);
 		}
 
-		this.setState(st => {
-			return { tiles: tiles, numFlags: 0};
-		});
+		if (this._isMounted) {
+			this.setState(st => {
+				return { tiles: tiles, numFlags: 0};
+			});
+		}
 	}
 
 	toggleDifficulty = () => {
@@ -78,11 +87,13 @@ class Board extends React.Component {
 				break;
 		}
 
-		this.setState(
-			{ numRows: numRows, numColumns: numColumns, numBombs: numBombs, difficulty: nextDifficulty }
-			, () => {
-			this.resetBoard();
-		});
+		if (this._isMounted) {
+			this.setState(
+				{ numRows: numRows, numColumns: numColumns, numBombs: numBombs, difficulty: nextDifficulty }
+				, () => {
+				this.resetBoard();
+			});
+		}
 	}
 
 	randomizeBombs = (selectedRow, selectedCol) => {
@@ -105,9 +116,11 @@ class Board extends React.Component {
 			}
 		}
 
-		this.setState(st => {
-			return { tiles: tiles };
-		});
+		if (this._isMounted) {
+			this.setState(st => {
+				return { tiles: tiles };
+			});
+		}
 	}
 
 	markAdjacent = (tiles, row, col) => {
@@ -177,9 +190,11 @@ class Board extends React.Component {
 
 		tiles[row][col].isFlagged = !tiles[row][col].isFlagged;
 
-		this.setState(st => {
-			return { tiles: tiles, numFlags: numFlags };
-		});
+		if (this._isMounted) {
+			this.setState(st => {
+				return { tiles: tiles, numFlags: numFlags };
+			});
+		}
 	}
 
 	revealTile = (row, col) => {
@@ -192,9 +207,11 @@ class Board extends React.Component {
 			tiles = this.revealNeighbors(tiles, row, col);
 		}
 
-		this.setState(st => {
-			return { tiles: tiles };
-		});
+		if (this._isMounted) {
+			this.setState(st => {
+				return { tiles: tiles };
+			});
+		}
 	}
 
 	revealNeighbors = (tiles, row, col) => {
@@ -236,9 +253,11 @@ class Board extends React.Component {
 			});
 		});
 
-		this.setState(st => {
-			return { tiles: tiles };
-		});
+		if (this._isMounted) {
+			this.setState(st => {
+				return { tiles: tiles };
+			});
+		}
 	}
 
 	checkIfWon = () => {
@@ -268,9 +287,11 @@ class Board extends React.Component {
 			});
 		});
 
-		this.setState(st => {
-			return { tiles: tiles, numFlags: 0 };
-		});
+		if (this._isMounted) {
+			this.setState(st => {
+				return { tiles: tiles, numFlags: 0 };
+			});
+		}
 	}
 
 	renderBoard = () => {

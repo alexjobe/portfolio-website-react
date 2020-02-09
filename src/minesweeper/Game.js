@@ -11,6 +11,9 @@ const gameStates = {
 }
 
 class Game extends Component {
+	
+	_isMounted = false;
+
 	state = {
 		flagMode: false,
 		gameState: gameStates.GAME_STATE_START,
@@ -18,26 +21,34 @@ class Game extends Component {
 	}
 
 	componentDidMount = () => {
+		this._isMounted = true;
 		setInterval(this.incrementSeconds, 1000);
 	}
 
+	componentWillUnmount() {
+		this._isMounted = false;
+	}
+
 	toggleFlagMode = () => {
-		this.setState(st => {
-			return { flagMode: !this.state.flagMode };
-		});
+		if(this._isMounted){
+			this.setState(st => {
+				return { flagMode: !this.state.flagMode };
+			});
+		}
 	}
 
 	setGameState = (gameState) => {
+		if (this._isMounted) {
+			if (gameState === gameStates.GAME_STATE_START) {
+				this.setState(st => {
+					return { numSeconds: 0 };
+				});
+			}
 
-		if (gameState === gameStates.GAME_STATE_START) {
 			this.setState(st => {
-				return { numSeconds: 0 };
+				return { gameState: gameState };
 			});
 		}
-
-		this.setState(st => {
-			return { gameState: gameState };
-		});
 	}
 
 	incrementSeconds = () => {
@@ -45,9 +56,11 @@ class Game extends Component {
 			let numSeconds = this.state.numSeconds;
 			numSeconds++;
 
-			this.setState(st => {
-				return { numSeconds: numSeconds };
-			});
+			if (this._isMounted) {
+				this.setState(st => {
+					return { numSeconds: numSeconds };
+				});
+			}
 		}
 	}
 
