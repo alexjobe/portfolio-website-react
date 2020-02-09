@@ -163,6 +163,7 @@
   border-radius: 4px;
   background-color: #1f2833;
   color: #14F3FF;
+  text-align: center;
 }
 
 .message-display i.toggle:hover {
@@ -201,16 +202,16 @@
 
   .btn {
     font-size: 1.2rem;
-    height: 30px;
+    height: 40px;
   }
 
   .tile {
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
   }
 
   .board-row {
-    height: 30px;
+    height: 40px;
   }
 
   .message-display {
