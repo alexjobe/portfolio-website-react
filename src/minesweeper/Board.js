@@ -283,9 +283,12 @@ class Board extends React.Component {
 			/>
 		));
 
+		let uiClass = "board-ui";
+		if (this.props.flagMode) { uiClass += " flagMode"; }
+
 		return (
 			<div className="board">
-				<div className="board-ui">
+				<div className={uiClass}>
 					{ this.props.gameState === gameStates.GAME_STATE_START ? 
 						<DifficultyButton difficulty={this.state.difficulty} toggleDifficulty={this.toggleDifficulty} /> 
 						: <TimerDisplay numSeconds={this.props.numSeconds} /> 

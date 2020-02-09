@@ -9,10 +9,6 @@
           animation: 1s fade 0s forwards;
 }
 
-.game.flagMode {
-  background-color: #44576f;
-}
-
 .tile {
   flex: 0 0 auto;
   width: 50px;
@@ -126,6 +122,10 @@
   margin: 50px 0px 10px;
   padding: 10px;
   background-color: #1f2833;
+}
+
+.board-ui.flagMode {
+  background-color: #57708e;
 }
 
 .btn {
