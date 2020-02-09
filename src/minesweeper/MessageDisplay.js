@@ -77,7 +77,7 @@ class MessageDisplay extends React.Component {
 				<p>
 					Your objective is to clear the board of hidden mines ( <i className="fas fa-radiation"></i> ). The 
 					number on a tile tells you how many mines are adjacent to it. Click a tile to reveal its contents — if 
-					it contains a mine, you lose. The first square you click will never contain a mine. Mark tiles that you 
+					it contains a mine, you lose. The first tile you click will never contain a mine. Mark tiles that you 
 					know contain mines by enabling Flag Mode ( <i className="fas fa-flag"></i> ) and clicking them. Once all 
 					empty tiles are revealed, you win!
 				</p>
