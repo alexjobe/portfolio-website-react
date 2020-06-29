@@ -10,7 +10,7 @@ const AboutText = () => (
     </p>
     <br />
     <p>
-      I recently completed my double major in <strong>Applied Mathematics::Computer Science</strong> and <strong>
+      I recently completed my double major in <strong>Applied Mathematics : Computer Science</strong> and <strong>
       Game Design & Development</strong>, but that doesn't mean I'm done learning! Much of my free time is spent at coffee 
       shops and libraries, following lessons on Udemy and Codecademy, reading books like <em><a target="_blank" 
       rel="noopener noreferrer" href ='https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882'>
@@ -20,7 +20,7 @@ const AboutText = () => (
     </p>
     <br />
     <p>
-      When I'm not programming, I can usually be found reading, painting, gaming, or hanging out with my two cats.
+      When I'm not programming, I can usually be found reading, gaming, or hanging out with my two cats.
     </p>
     <Skills />
   </div>

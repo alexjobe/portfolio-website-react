@@ -1,0 +1,92 @@
+#ECSPage {
+    padding: 0;
+}
+
+.BlogContent {
+    background-color: #45a29e;
+    color: #1f2833;
+    padding: 4rem 16rem;
+    max-width: 100%;
+}
+
+.BlogContent p {
+    margin: 1.2rem 0;
+}
+
+.BlogContent a {
+    margin: 0;
+    font-weight: bold;
+}
+
+.BlogContent h1 {
+    margin: 2rem 0;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.BlogContent h2 {
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.BlogContent h3 {
+    font-size: 1.5rem;
+}
+
+.BlogContent hr {
+    border-width: 1px 0 0 0;
+    border-color: #1f2833;
+    border-style: solid;
+    margin-top: .5rem;
+}
+
+.BlogContent img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 1.5rem auto;
+}
+
+.ImgScrollContainer {
+    display: flex;
+	overflow-x: auto;
+	overflow-y: hidden;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.BlogContent strong {
+    font-weight: 450;
+    color: #31007a;
+}
+
+figure {
+    background-color: #1f2833;
+    padding: 1rem;
+    margin: 2rem 0;
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    text-align: center;
+}
+
+figcaption {
+    color: white;
+    margin: 1rem 4rem;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 1200px) {
+    .BlogContent {
+        padding: 4rem 2rem;
+    }
+
+    .BlogContent img {
+        max-width: none;
+        max-height: none;
+    }
+}
+
+@media (max-width: 800px) {
+    
+}

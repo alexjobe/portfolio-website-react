@@ -7,14 +7,7 @@ import NodeImg from '../assets/img/node.jpg';
 import LaptopCheckoutImg from '../assets/img/laptopCheckout.jpg';
 import SdlImg from '../assets/img/sdl.jpg';
 import MineSweeperImg from '../assets/img/mineSweeper.jpg';
-
-const pages = {
-  PAGE_HOME: "PAGE_HOME",
-  PAGE_ABOUT: "PAGE_ABOUT",
-  PAGE_PROJECTS: "PAGE_PROJECTS",
-  PAGE_CONTACT: "PAGE_CONTACT",
-  PAGE_GAME: "PAGE_GAME"
-}
+import CppImg from '../assets/img/cpp.jpg';
 
 class ProjectsPage extends React.Component {
 
@@ -23,6 +16,14 @@ class ProjectsPage extends React.Component {
       <section className="ProjectsPage">
         <h3 className="SectionTitle">Projects</h3>
         <div className="Projects">
+          <Project
+            image={CppImg}
+            imageText="MineSweeper"
+            iconClass="fas fa-sitemap"
+            link="/posts/ecs"
+            title="Archetypal ECS (C++)"
+            aboutText={<p>A data-oriented Entity Component System that makes use of Archetypes</p>}
+          />
           <Project 
             image={OlymbotsImg} 
             imageText="Olymbots" 
@@ -52,10 +53,9 @@ class ProjectsPage extends React.Component {
             image={MineSweeperImg}
             imageText="MineSweeper"
             iconClass="fas fa-radiation"
-            link="/#"
+            link="/minesweeper"
             title="MineSweeper.js"
             aboutText={<p>A Minesweeper clone made entirely in React: click to play it here!</p>}
-            onClick={this.props.setPage.bind(this, pages.PAGE_GAME)}
           />
           <Project
             image={ZordoImg}
@@ -74,7 +74,7 @@ class ProjectsPage extends React.Component {
             aboutText={<p>A forum built with Node.js, Express, and MongoDB that features user authentication</p>}
           />
         </div>
-        <a className="GithubLink" target="_blank" rel="noopener noreferrer" href="https://github.com/alexjobe">{"See more at Github "}
+        <a className="GithubLink" href="https://github.com/alexjobe">{"See more at Github "}
           <i className="fab fa-github"></i>
         </a>
       </section>

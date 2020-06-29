@@ -36,6 +36,10 @@
   max-height: 100%;
 }
 
+.NavHome {
+  font-size: 1.8rem;
+}
+
 #Navbar nav {
   display: -webkit-box;
   display: -ms-flexbox;
