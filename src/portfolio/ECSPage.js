@@ -12,10 +12,10 @@ const ECSPage = () => (
     <div className="BlogContent">
       <h1 className="BlogTitle">Archetypal Entity Component System (C++)</h1>
       <p>
-        After watching a few presentations on Data-Oriented Design and Entity Component Systems (ECS), 
+        After reading about and watching several presentations on <strong>Data-Oriented Design</strong> and <strong>Entity Component Systems (ECS)</strong>, 
         I was inspired to try my hand at creating my own ECS implementation. Moreover, while developing 
-        my ECS engine I ran into several roadblocks, and through researching I discovered various approaches that 
-        others have used to overcome these quandaries. One such approach is the use of archetypes, 
+        my ECS engine I ran into some setbacks, and through researching I discovered various approaches that 
+        others have used to overcome these dilemmas. One such approach is the use of archetypes, 
         which I decided to incorporate in my design. The code can be found <a href="https://github.com/alexjobe/ecs">here</a>.
       </p>
       <h2 className="BlogSectionTitle">An Overview of ECS</h2>
@@ -31,7 +31,7 @@ const ECSPage = () => (
       <hr />
       <p>
         In a traditional Object-Oriented approach to game design, most entities in the game world 
-        would probably be represented as objects (e.g. Player, Enemy, World, Camera), and those 
+        would probably be represented as objects (e.g. Player, Enemy, Camera), and those 
         objects would contain various pieces of state and behavior.
       </p>
       <p>
@@ -42,7 +42,7 @@ const ECSPage = () => (
       </p>
       <p>
         This of course leads to coupling, as the player object contains code touching multiple domains. 
-        Separate domains should be encapsulated and isolated from one another: rendering has nothing to 
+        Different domains should be encapsulated and isolated from one another: rendering has nothing to 
         do with sound, for example. Plus, a monolithic object that spans multiple domains is likely to 
         span thousands of lines of code, and become nigh impossible to maintain.
       </p>
@@ -51,7 +51,7 @@ const ECSPage = () => (
         and puts it in its own <strong>Component</strong> (usually a basic struct). All behavior is pulled out and divided 
         into separate <strong>Systems</strong>. So now an <strong>Entity</strong> is just a container of components. Each component only 
         contains data pertaining to a particular domain, and does not know about other components. Systems 
-        do not have any data of their own, and simply iterate over all entities that contain the components 
+        do not have any data of their own, and simply iterate over all entities that contain the component types  
         they operate on.
       </p>
       <p>
@@ -73,9 +73,9 @@ const ECSPage = () => (
       </figure>
       <p>
         For example, a <strong>Player</strong> entity may contain an <strong>Input</strong>, 
-        a <strong>Transform</strong>, and a <strong>Rigidbody</strong>. A 
+        a <strong>Transform</strong>, and a <strong>Rigidbody</strong> component. A 
         <strong> Goblin</strong> entity may have an <strong>EnemyAI</strong>, a <strong>Transform</strong>, 
-        and a <strong>Rigidbody</strong>. The <strong>Physics</strong> system only cares 
+        and a <strong>Rigidbody</strong> component. The <strong>Physics</strong> system only cares 
         about entities that have a <strong>Transform</strong> <i>and</i> a <strong>Rigidbody</strong>, so it will 
         operate on both the <strong>Player</strong> and the <strong>Goblin</strong>. However, it does not 
         operate on the <strong>HealthBarUI</strong>, which contains a <strong>Transform</strong> but no 
@@ -172,10 +172,11 @@ const ECSPage = () => (
       <hr />
       <p>
         The ECS engine must maintain which components go in which archetypes, and move components whenever 
-        their owner’s archetype changes. In addition, new archetypes are created whenever an entity does 
+        their owners' archetypes change. It must also keep arrays packed, which requires a mapping from entity 
+        IDs to their array indices. In addition, new archetypes are created whenever an entity does 
         not match any existing archetypes. Because of this, there is additional overhead when creating or 
         removing entities. However, this is (hopefully) offset by the increased speed of performing many 
-        homogenous operations on many entities.
+        homogenous operations on many different entities.
       </p>
       <p>
         I am admittedly new to the Data-Oriented programming paradigm, and this is my first ECS implementation. 
