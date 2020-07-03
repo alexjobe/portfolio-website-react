@@ -80,9 +80,9 @@ const ECSPage = () => (
         </div>
       </figure>
       <p>
-        For example, a <strong>Player</strong> entity may contain an <strong>Input</strong>, 
+        For example, a <strong>Player</strong> entity has an <strong>Input</strong>, 
         a <strong>Transform</strong>, and a <strong>Rigidbody</strong> component. A 
-        <strong> Goblin</strong> entity may have an <strong>EnemyAI</strong>, a <strong>Transform</strong>, 
+        <strong> Goblin</strong> entity has an <strong>EnemyAI</strong>, a <strong>Transform</strong>, 
         and a <strong>Rigidbody</strong> component. The <strong>Physics</strong> system only cares 
         about entities that have a <strong>Transform</strong> <i>and</i> a <strong>Rigidbody</strong>, so it will 
         operate on both the <strong>Player</strong> and the <strong>Goblin</strong>. However, it does not 
@@ -153,7 +153,7 @@ const ECSPage = () => (
         on the components in those archetypes. For example, if our <strong>Physics</strong> system only cares about entities that have a 
         <strong> Transform</strong> <i>and</i> a <strong>Rigidbody</strong>, it would operate on both <strong>Archetype A</strong> and <strong>Archetype B</strong> from the previous example. 
         However, <strong>Archetype C</strong> has an array of <strong>Transform</strong> components and an array of <strong>Renderer</strong> components, so the <strong>Physics </strong> 
-        system would not operate on <strong>Archetype C</strong> (since it has no <strong>Rigidbody</strong> array).
+        system would <i>not</i> operate on <strong>Archetype C</strong> (since it has no <strong>Rigidbody</strong> array).
       </p>
       <figure>
         <figcaption>
@@ -183,7 +183,7 @@ const ECSPage = () => (
         archetypes change. It must also keep arrays packed, which requires moving components in the array when one 
         is removed, and maintaining a mapping from entity IDs to array indices. Because of this, there is additional 
         overhead when creating or destroying entities. However, this overhead is (hopefully) offset by the increased 
-        speed of performing many homogenous operations on many different entities.
+        speed of performing many homogeneous operations on many different entities.
       </p>
       <p>
         I am admittedly new to the Data-Oriented programming paradigm, and this is my first ECS implementation. 
