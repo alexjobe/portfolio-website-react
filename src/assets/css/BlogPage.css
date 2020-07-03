@@ -85,8 +85,10 @@ figcaption {
         max-width: none;
         max-height: none;
     }
-}
 
-@media (max-width: 800px) {
-    
+    figcaption {
+        color: white;
+        margin: 1rem 1rem;
+        font-size: 1.2rem;
+    }
 }

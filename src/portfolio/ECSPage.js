@@ -12,9 +12,9 @@ const ECSPage = () => (
     <div className="BlogContent">
       <h1 className="BlogTitle">Archetypal Entity Component System (C++)</h1>
       <p>
-        After reading about and watching several presentations on <strong>Data-Oriented Design</strong> and <strong>Entity Component Systems (ECS)</strong>, 
+        After watching several presentations on <strong>Data-Oriented Design</strong> and <strong>Entity Component Systems (ECS)</strong>, 
         I was inspired to try my hand at creating my own ECS implementation. Moreover, while developing 
-        my ECS engine I ran into some setbacks, and through researching I discovered various approaches that 
+        my ECS engine I ran into a few setbacks, and through research I discovered various approaches that 
         others have used to overcome these dilemmas. One such approach is the use of archetypes, 
         which I decided to incorporate in my design. The code can be found <a href="https://github.com/alexjobe/ecs">here</a>.
       </p>
@@ -31,8 +31,8 @@ const ECSPage = () => (
       <hr />
       <p>
         In a traditional Object-Oriented approach to game design, most entities in the game world 
-        would probably be represented as objects (e.g. Player, Enemy, Camera), and those 
-        objects would contain various pieces of state and behavior.
+        would be represented as objects (e.g. Player, Enemy, Camera), and those objects would contain 
+        various pieces of state and behavior.
       </p>
       <p>
         However, problems arise when an entity spans multiple domains. For example, you may have a player 
@@ -41,7 +41,7 @@ const ECSPage = () => (
         and the character moves forward and attacks, which plays an animation and makes a sound. 
       </p>
       <p>
-        This of course leads to coupling, as the player object contains code touching multiple domains. 
+        This of course leads to coupling, as the player object contains code touching various domains. 
         Different domains should be encapsulated and isolated from one another: rendering has nothing to 
         do with sound, for example. Plus, a monolithic object that spans multiple domains is likely to 
         span thousands of lines of code, and become nigh impossible to maintain.
@@ -50,17 +50,25 @@ const ECSPage = () => (
         To solve this predicament, an ECS engine pulls all data relating to a particular domain out of the entity, 
         and puts it in its own <strong>Component</strong> (usually a basic struct). All behavior is pulled out and divided 
         into separate <strong>Systems</strong>. So now an <strong>Entity</strong> is just a container of components. Each component only 
-        contains data pertaining to a particular domain, and does not know about other components. Systems 
+        contains data pertaining to a single domain, and does not know about other components. Systems 
         do not have any data of their own, and simply iterate over all entities that contain the component types  
         they operate on.
       </p>
       <p>
         This is an example of the <strong>Composition Over Inheritance</strong> principle, which states that a class 
         should achieve polymorphic behavior through its composition (containing instances of other classes) 
-        rather than inheriting from a base class. Composition is a popular tool in game development, since 
-        games often contain many different entities that share <i>some</i> functionality, and composition 
-        offers a level of flexibility that inheritance does not. ECS takes this a step further by separating 
-        data from functionality, so each entity is just a collection of data that systems process.
+        rather than inheriting from a base class.
+      </p>
+      <p>
+        Composition is a popular tool in game development, since games often contain many different entities that 
+        share <i>some</i> functionality, and composition offers a level of flexibility that inheritance does not. 
+        Components can be reused and recombined to create myriad diverse entities, which makes trying out new ideas 
+        as easy as plugging in a new component. 
+      </p>
+      <p>
+        ECS takes this a step further by separating data from functionality, so each entity is just a collection of 
+        data components that systems process. A system only operates on a specific subset of components, which helps keep 
+        domains decoupled. Editing a system should not require changes to other systems, nor the components they operate on.
       </p>
       <figure>
         <figcaption>
@@ -171,12 +179,11 @@ const ECSPage = () => (
       <h2 className="BlogSectionTitle">Conclusion</h2>
       <hr />
       <p>
-        The ECS engine must maintain which components go in which archetypes, and move components whenever 
-        their owners' archetypes change. It must also keep arrays packed, which requires a mapping from entity 
-        IDs to their array indices. In addition, new archetypes are created whenever an entity does 
-        not match any existing archetypes. Because of this, there is additional overhead when creating or 
-        removing entities. However, this is (hopefully) offset by the increased speed of performing many 
-        homogenous operations on many different entities.
+        The ECS engine must track which components go in which archetypes, and move components whenever their owners' 
+        archetypes change. It must also keep arrays packed, which requires moving components in the array when one 
+        is removed, and maintaining a mapping from entity IDs to array indices. Because of this, there is additional 
+        overhead when creating or destroying entities. However, this overhead is (hopefully) offset by the increased 
+        speed of performing many homogenous operations on many different entities.
       </p>
       <p>
         I am admittedly new to the Data-Oriented programming paradigm, and this is my first ECS implementation. 
