@@ -7,7 +7,7 @@ import NodeImg from '../assets/img/node.jpg';
 import LaptopCheckoutImg from '../assets/img/laptopCheckout.jpg';
 import SdlImg from '../assets/img/sdl.jpg';
 import MineSweeperImg from '../assets/img/mineSweeper.jpg';
-import CppImg from '../assets/img/cpp.jpg';
+import EcsImg from '../assets/img/ecs.jpg';
 
 class ProjectsPage extends React.Component {
 
@@ -17,8 +17,8 @@ class ProjectsPage extends React.Component {
         <h3 className="SectionTitle">Projects</h3>
         <div className="Projects">
           <Project
-            image={CppImg}
-            imageText="MineSweeper"
+            image={EcsImg}
+            imageText="ECS"
             iconClass="fas fa-sitemap"
             link="/posts/ecs"
             title="Archetypal ECS (C++)"
