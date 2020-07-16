@@ -6,7 +6,7 @@ const AboutText = () => (
     <p>
       I am a software developer who loves making games! I have experience with a variety of programming languages
       and platforms, and I strive to grow as a developer every day. Lately I have been delving into game engine
-      architecture with C++ and SDL2, as well as improving my skills with Unity, Node.js, and React.
+      architecture with C++ and SDL2, as well as improving my skills with Unity and Unreal.
     </p>
     <br />
     <p>
