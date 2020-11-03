@@ -5,9 +5,9 @@ import OlymbotsImg from '../assets/img/olymbots.jpg';
 import ZordoImg from '../assets/img/zordo.jpg';
 import NodeImg from '../assets/img/node.jpg';
 import LaptopCheckoutImg from '../assets/img/laptopCheckout.jpg';
-import SdlImg from '../assets/img/sdl.jpg';
 import MineSweeperImg from '../assets/img/mineSweeper.jpg';
 import EcsImg from '../assets/img/ecs.jpg';
+import UnrealImg from '../assets/img/unreal_shooter.jpg';
 
 class ProjectsPage extends React.Component {
 
@@ -16,6 +16,14 @@ class ProjectsPage extends React.Component {
       <section className="ProjectsPage">
         <h3 className="SectionTitle">Projects</h3>
         <div className="Projects">
+          <Project
+            image={UnrealImg}
+            imageText="Unreal Shooter"
+            iconClass="fas fa-gamepad"
+            link="https://github.com/alexjobe/ue4-shooter"
+            title="Unreal 4 Shooter"
+            aboutText={<p>A third-person shooter with networked co-op, made in Unreal with C++ and Blueprint</p>}
+          />
           <Project
             image={EcsImg}
             imageText="ECS"
@@ -40,14 +48,6 @@ class ProjectsPage extends React.Component {
             link="https://github.com/alexjobe/laptop-checkout-react"
             title="LaptopCheckout"
             aboutText={<p>An app built with React, Node.js, and MongoDB that tracks laptop usage and sends automatic email reminders</p>}
-          />
-          <Project
-            image={SdlImg}
-            imageText="Arcade App"
-            iconClass="fas fa-ghost"
-            link="https://github.com/alexjobe/arcade-app-sdl"
-            title="ArcadeApp"
-            aboutText={<p>A 2D game engine built with C++ and SDL2 that will play arcade games like Breakout and Snake</p>}
           />
           <Project
             image={MineSweeperImg}
