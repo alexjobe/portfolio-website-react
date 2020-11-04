@@ -20,7 +20,7 @@ class ProjectsPage extends React.Component {
             image={UnrealImg}
             imageText="Unreal Shooter"
             iconClass="fas fa-gamepad"
-            link="https://github.com/alexjobe/ue4-shooter"
+            link="https://github.com/alexjobe/project-horde"
             title="Unreal 4 Shooter"
             aboutText={<p>A third-person shooter with networked co-op, made in Unreal with C++ and Blueprint</p>}
           />
