@@ -2,12 +2,12 @@ import React from 'react';
 import Project from './Project';
 import '../assets/css/ProjectsPage.css'
 import OlymbotsImg from '../assets/img/olymbots.jpg';
-import ZordoImg from '../assets/img/zordo.jpg';
 import NodeImg from '../assets/img/node.jpg';
 import LaptopCheckoutImg from '../assets/img/laptopCheckout.jpg';
 import MineSweeperImg from '../assets/img/mineSweeper.jpg';
 import EcsImg from '../assets/img/ecs.jpg';
-import UnrealImg from '../assets/img/unreal_shooter.jpg';
+import ProjectHordeImg from '../assets/img/unreal_shooter.jpg';
+import VertiscapeImg from '../assets/img/vertiscape.jpg';
 
 class ProjectsPage extends React.Component {
 
@@ -17,12 +17,20 @@ class ProjectsPage extends React.Component {
         <h3 className="SectionTitle">Projects</h3>
         <div className="Projects">
           <Project
-            image={UnrealImg}
-            imageText="Unreal Shooter"
+            image={ProjectHordeImg}
+            imageText="ProjectHorde"
             iconClass="fas fa-gamepad"
-            link="https://github.com/alexjobe/project-horde"
-            title="Unreal 4 Shooter"
+            link="https://youtu.be/bElyXm1qsYc"
+            title="ProjectHorde"
             aboutText={<p>A third-person shooter with networked co-op, made in Unreal with C++ and Blueprint</p>}
+          />
+          <Project
+            image={VertiscapeImg}
+            imageText="VertiScape"
+            iconClass="fas fa-gamepad"
+            link="https://youtu.be/p0SvhHEtvLQ"
+            title="VertiScape"
+            aboutText={<p>An Unreal platformer that features wallrunning and a generic save system</p>}
           />
           <Project
             image={EcsImg}
@@ -56,14 +64,6 @@ class ProjectsPage extends React.Component {
             link="/minesweeper"
             title="MineSweeper.js"
             aboutText={<p>A Minesweeper clone made entirely in React: click to play it here!</p>}
-          />
-          <Project
-            image={ZordoImg}
-            imageText="Zordo"
-            iconClass="fas fa-keyboard"
-            link="https://github.com/alexjobe/Epic-of-Zordo"
-            title="Epic of Zordo"
-            aboutText={<p>A 2D role-playing game demo made with Godot and GDScript (a dynamically-typed language based on Python)</p>}
           />
           <Project
             image={NodeImg}

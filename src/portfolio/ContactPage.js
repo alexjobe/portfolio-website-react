@@ -15,9 +15,6 @@ const ContactPage = () => (
           <a href="https://www.linkedin.com/in/alexjobe/"><i className="fab fa-linkedin"></i> LinkedIn</a>
         </li>
         <li>
-          <a href="https://codepen.io/alexjobe/"><i className="fab fa-codepen"></i> CodePen</a>
-        </li>
-        <li>
           <a href="https://ajobe.itch.io/"><i className="fas fa-gamepad"></i> itch.io</a>
         </li>
       </ul>

@@ -5,17 +5,16 @@ const AboutText = () => (
   <div className='AboutText'>
     <p>
       I am a software developer who loves making games! I have experience with a variety of programming languages
-      and platforms, and I strive to grow as a developer every day. Lately I have been delving into game engine
-      architecture with C++ and SDL2, as well as improving my skills with Unity and Unreal.
+      and platforms, and I strive to grow as a developer every day.
     </p>
     <br />
     <p>
-      I recently completed my double major in <strong>Applied Mathematics : Computer Science</strong> and <strong>
+      I completed my double major in <strong>Applied Mathematics & Computer Science</strong> and <strong>
       Game Design & Development</strong>, but that doesn't mean I'm done learning! Much of my free time is spent at coffee 
-      shops and libraries, following lessons on Udemy and Codecademy, reading books like <em><a target="_blank" 
-      rel="noopener noreferrer" href ='https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882'>
+      shops and libraries, following lessons online, reading books like <em><a target="_blank" 
+        rel="noopener noreferrer" href='https://www.goodreads.com/book/show/3735293-clean-code'>
       Clean Code</a></em> and <em><a target="_blank" rel="noopener noreferrer" href=
-      'https://www.amazon.com/Game-Programming-Patterns-Robert-Nystrom/dp/0990582906'>Game Programming Patterns</a></em>, 
+      'https://www.goodreads.com/book/show/15499449-game-programming-patterns'>Game Programming Patterns</a></em>,
       and challenging myself with new projects.
     </p>
     <br />
