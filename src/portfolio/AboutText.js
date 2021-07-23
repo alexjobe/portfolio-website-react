@@ -4,7 +4,7 @@ import Skills from './Skills'
 const AboutText = () => (
   <div className='AboutText'>
     <p>
-      I am a software developer who loves making games! I have experience with a variety of programming languages
+      I'm a software developer who loves making games! I have experience with a variety of programming languages
       and platforms, and I strive to grow as a developer every day.
     </p>
     <br />
