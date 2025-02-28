@@ -8,14 +8,23 @@ import MineSweeperImg from '../assets/img/mineSweeper.jpg';
 import EcsImg from '../assets/img/ecs.jpg';
 import ProjectHordeImg from '../assets/img/unreal_shooter.jpg';
 import VertiscapeImg from '../assets/img/vertiscape.jpg';
+import UnrealImg from '../assets/img/unreal.jpg';
 
-class ProjectsPage extends React.Component {
+class ProjectsPagePersonal extends React.Component {
 
   render = () => {
     return (
       <section className="ProjectsPage">
-        <h3 className="SectionTitle">Projects</h3>
+        <h3 className="SectionTitle">Personal Projects</h3>
         <div className="Projects">
+          <Project
+            image={UnrealImg}
+            imageText="Meteoric"
+            iconClass="fas fa-gamepad"
+            link="https://github.com/alexjobe/meteoric"
+            title="Meteoric"
+            aboutText={<p>A true first-person (TFP) multiplayer shooter with procedural recoil, ADS, and weapon sway. Made with Unreal's Gameplay Ability System (GAS)</p>}
+          />
           <Project
             image={ProjectHordeImg}
             imageText="ProjectHorde"
@@ -82,4 +91,4 @@ class ProjectsPage extends React.Component {
   }
 }
 
-export default ProjectsPage;
+export default ProjectsPagePersonal;

@@ -3,7 +3,9 @@ import './assets/css/App.css'
 import './assets/fontawesome/css/all.css';
 import HomePage from './portfolio/HomePage';
 import AboutPage from './portfolio/AboutPage';
-import ProjectsPage from './portfolio/ProjectsPage';
+import ProjectsPageHome from './portfolio/ProjectsPageHome';
+import ProjectsPagePersonal from './portfolio/ProjectsPagePersonal';
+import ProjectsPageProfessional from './portfolio/ProjectsPageProfessional';
 import ContactPage from './portfolio/ContactPage';
 import Navbar from './portfolio/Navbar';
 import Game from './minesweeper/Game';
@@ -26,8 +28,14 @@ class App extends React.Component {
             <Route path="/about">
               <AboutPage />
             </Route>
-            <Route path="/projects">
-              <ProjectsPage />
+            <Route path="/projects/home">
+              <ProjectsPageHome />
+            </Route>
+            <Route path="/projects/personal">
+              <ProjectsPagePersonal />
+            </Route>
+            <Route path="/projects/professional">
+              <ProjectsPageProfessional />
             </Route>
             <Route path="/contact">
               <ContactPage />

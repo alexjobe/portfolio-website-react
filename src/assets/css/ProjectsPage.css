@@ -22,10 +22,50 @@
   margin: 2rem;
 }
 
-.Project h3 {
+.ProjectCategoryIcon {
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+    -ms-flex-pack: center;
+      justify-content: center;
+  text-align: center;
+  font-size: 6rem;
+  -webkit-transition: -webkit-transform .15s ease-in-out;
+  transition: -webkit-transform .15s ease-in-out;
+  -o-transition: transform .15s ease-in-out;
+  transition: transform .15s ease-in-out;
+  transition: transform .15s ease-in-out, -webkit-transform .15s ease-in-out;
+}
+
+.ProjectCategoryIcon:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: -webkit-transform .25s ease-in-out;
+  transition: -webkit-transform .25s ease-in-out;
+  -o-transition: transform .25s ease-in-out;
+  transition: transform .25s ease-in-out;
+  transition: transform .25s ease-in-out, -webkit-transform .25s ease-in-out;
+}
+
+.Project ul li{
+  margin: 0.5rem;
+  list-style-type: square;
+}
+
+.ProjectTitle {
   margin: 2rem 0;
   text-align: center;
+}
+
+.ProjectTitle h3 {
+  margin: .8rem 0;
   font-size: 2rem;
+}
+
+.ProjectTitle h4 {
+  font-size: 1.7rem;
+  color: white;
 }
 
 .ProjectDisplay {
@@ -160,8 +200,12 @@
     padding: 0 2rem;
   }
 
-  .Project h3 {
+  .ProjectTitle h3 {
     font-size: 1.5rem;
+  }
+
+  .ProjectTitle h4 {
+    font-size: 1.3rem;
   }
 
   .GithubLink {
