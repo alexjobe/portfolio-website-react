@@ -4,8 +4,9 @@ import Skills from './Skills'
 const AboutText = () => (
   <div className='AboutText'>
     <p>
-      As a gameplay engineer, I have a proven track record of delivering high-quality, immersive gaming experiences. 
-      Proficient in C++ and various scripting languages, I specialize in writing robust, maintainable code and implementing complex game mechanics.
+      As a gameplay systems engineer, I have a proven track record of delivering high-quality, immersive gaming experiences. 
+      Proficient in C++, Unreal Engine, and multiple scripting languages, I specialize in writing robust, maintainable code, 
+      and implementing complex game mechanics.
     </p>
     <br />
     <p>

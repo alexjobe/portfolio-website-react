@@ -18,7 +18,7 @@ class ProjectsPageProfessional extends React.Component {
             iconClass="fas fa-gamepad"
             link="https://alienrogueincursion.com/"
             title="Alien: Rogue Incursion"
-            subtitle="Survios"
+            subtitle="Company: Survios"
             aboutText={
               <p>
                 <ul>
@@ -35,7 +35,7 @@ class ProjectsPageProfessional extends React.Component {
             iconClass="fas fa-gamepad"
             link="https://www.creedrisetoglory.com/"
             title="Creed: Rise to Glory"
-            subtitle="Survios"
+            subtitle="Company: Survios"
             aboutText={
               <p>
                 <ul>
@@ -52,7 +52,7 @@ class ProjectsPageProfessional extends React.Component {
             iconClass="fas fa-gamepad"
             link="https://www.puzzlebobble3d.com/"
             title="Puzzle Bobble 3D: Vacation Odyssey"
-            subtitle="Survios"
+            subtitle="Company: Survios"
             aboutText={
               <p>
                 <ul>
